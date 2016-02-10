@@ -1,0 +1,2 @@
+# PHP is run as nobody user
+nobody:VERIFIED_EMAIL@EXAMPLE.COM:email-smtp.us-west-2.amazonaws.com:587

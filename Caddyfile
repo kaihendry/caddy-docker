@@ -1,0 +1,6 @@
+0.0.0.0
+fastcgi / 127.0.0.1:9000 php
+browse
+startup php-fpm
+log access.log
+errors error.log

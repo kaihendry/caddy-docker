@@ -69,7 +69,7 @@ The last 2 lines are only present in the php variant.
 
 Caddyfile: `/etc/Caddyfile`
 
-Sites root: `/srv`
+Sites root: `/srv` (where unprefixed logs go too)
 
 #### Using local Caddyfile and sites root
 
@@ -100,3 +100,8 @@ $ docker run -d -v `pwd`/Caddyfile:/etc/Caddyfile -p 80:80 -p 443:443 abiosoft/c
 ```
 $ docker run -d -v `pwd`/Caddyfile:/etc/Caddyfile -v $HOME/.caddy:/root/.caddy -p 80:80 -p 443:443 abiosoft/caddy
 ```
+
+### SMTP
+
+	docker build -t phpmail .
+	docker run -d -p 2015:2015 -v `pwd`/ssmtp:/etc/ssmtp/ -t phpmail
