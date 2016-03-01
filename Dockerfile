@@ -1,4 +1,4 @@
-FROM alpine:3.2
+FROM alpine:latest
 MAINTAINER Abiola Ibrahim <abiola89@gmail.com>
 
 LABEL caddy_version="0.8.1" architecture="amd64"
@@ -6,7 +6,7 @@ LABEL caddy_version="0.8.1" architecture="amd64"
 RUN apk add --update openssh-client git tar php-fpm ssmtp
 
 # essential php libs
-RUN apk add php-curl php-gd php-zip php-iconv php-sqlite3 php-mysql php-mysqli
+RUN apk add php-curl php-gd php-zip php-iconv php-sqlite3 php-mysql php-mysqli php-json
 
 # allow environment variable access.
 RUN echo "clear_env = no" >> /etc/php/php-fpm.conf
